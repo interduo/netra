@@ -24,7 +24,7 @@ netra [OPTIONS]
 Options:
   -f, --flow-port <FLOW_PORT>  UDP port for NetFlow/IPFIX/sFlow packets [default: 2055]
   -p, --http-port <HTTP_PORT>  TCP port for the HTTP dashboard and SSE API [default: 1337]
-  -d, --db-path <DB_PATH>      Path to the ASN database file [default: asndb.netra next to binary]
+  -d, --db-path <DB_PATH>      Path to the ASN database file [default: asndb.netra in the project directory, or next to the binary]
       --skip-asns <ASN,ASN,...>  Exclude ASNs from charts and lists (comma-separated)
   -h, --help                   Print help
 ```
