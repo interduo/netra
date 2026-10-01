@@ -191,10 +191,8 @@ fn parse_flow_sample(sample: &[u8], format: u32, now_ms: u64, flows: &mut Vec<Ex
                     }
                 }
             }
-            REC_SWITCH => {
-                if vlan_id == 0 && rec.len() >= 4 {
-                    vlan_id = (read_u32(rec, 0) & 0x0fff) as u16;
-                }
+            REC_SWITCH if vlan_id == 0 && rec.len() >= 4 => {
+                vlan_id = (read_u32(rec, 0) & 0x0fff) as u16;
             }
             _ => {}
         }
