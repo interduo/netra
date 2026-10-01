@@ -32,7 +32,7 @@ pub struct AppState {
     about = "Network flow analyzer with ASN mapping and live dashboard"
 )]
 struct Args {
-    /// UDP port to listen for NetFlow/IPFIX packets
+    /// UDP port to listen for NetFlow/IPFIX/sFlow packets
     #[arg(short = 'f', long, default_value_t = 2055)]
     flow_port: u16,
 
